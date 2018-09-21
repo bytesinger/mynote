@@ -14,3 +14,9 @@ $ sudo ./patched-open-vm-tools.sh
 ```
 /usr/bin/vmhgfs-fuse -o subtype=vmhgfs-fuse,allow_other /mnt/hgfs
 ```
+* 修复Failed to mount VMware vmblock fuse mount Error
+```
+sudo mkdir /var/run/vmblock-fuse
+sudo systemctl enable run-vmblock\\x2dfuse.mount
+sudo systemctl start run-vmblock\\x2dfuse.mount
+```
